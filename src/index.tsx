@@ -1,12 +1,12 @@
 import React from 'react'
 
 import { getDatabase, onValue, ref } from 'firebase/database'
-import ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 
 import './firebase'
-import { App } from './App'
+import { App } from './app/App'
 
 const db = getDatabase()
 const starCountRef = ref(db, 'products')
@@ -18,7 +18,7 @@ onValue(starCountRef, snapshot => {
 })
 console.log(getDatabase())
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
