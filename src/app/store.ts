@@ -1,7 +1,7 @@
 import { AnyAction, combineReducers, configureStore, ThunkAction } from '@reduxjs/toolkit'
 import thunk from 'redux-thunk'
 
-import { productReducer } from '../features/Main/main-slice'
+import { productReducer } from '../features/Products/products-slice'
 
 const rootReducer = combineReducers({
   main: productReducer,
