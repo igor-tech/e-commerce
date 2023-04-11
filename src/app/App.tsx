@@ -1,5 +1,5 @@
 import './App.css'
-import { Pages } from './pages/Pages'
+import { Pages } from './route-pages/Pages'
 
 export function App() {
   return (
